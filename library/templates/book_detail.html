@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} Book's Information Editing {% endblock%}
+
+{% block body %}
+    <div class="container">
+        <h1> {{ book.title }} </h1>
+
+        <div class="alert alert-success">
+            <h2><b>The Book's Title: </b>{{book.title}}</h2>
+            <p><b>The Book's Author: </b>{{book.author}}</p>
+            <p><b>Description: </b><br> {{book.description}}</p>
+            <p><b>The Date Of Saving: </b>{{book.date.date()}}</p>
+            <a href="/books/{{ book.id }}/delete" class="btn btn-danger">Delete</a>
+            <a href="/books/{{ book.id }}/edit" class="btn btn-success">Edit</a>
+        </div>
+
+    </div>
+
+{% endblock %}

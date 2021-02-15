@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} Adding Book {% endblock%}
+
+{% block body %}
+    <h1>Adding New Books</h1>
+    <div class="container">
+        <form method="post">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" class="form-control p-2" placeholder="The Book's Title">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author" class="form-control p-2" placeholder="The Book's Author">
+            <label for="description">Description</label>
+            <textarea name="description" id="description" class="form-control p-2" placeholder="Add a description obout the book"></textarea>
+            <input type="submit" name="submit" id="submit" class="btn btn-primary">
+        </form>
+    </div>
+
+{% endblock%}
