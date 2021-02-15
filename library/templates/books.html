@@ -4,13 +4,21 @@
 
 {% block body %}
     <h1>The Archive of Books</h1>
-    {% for book in books%}
-        <div class="alert alert-success">
-            <h2><b>The Book's Title: </b>{{book.title}}</h2>
-            <p><b>The Book's Author: </b>{{book.author}}</p>
-            <p><b>Description: </b><br> {{book.description}}</p>
-            <p><b>The Date Of Saving: </b>{{book.date.date()}}</p>
-            <a href="/books/{{ book.id }}" class="btn btn-success">Edit</a>
+
+    {% if books|length > 0 %}
+        {% for book in books%}
+            <div class="alert alert-success">
+                <h2><b>The Book's Title: </b>{{book.title}}</h2>
+                <p><b>The Book's Author: </b>{{book.author}}</p>
+                <p><b>Description: </b><br> {{book.description}}</p>
+                <p><b>The Date Of Saving: </b>{{book.date.date()}}</p>
+                <a href="/books/{{ book.id }}" class="btn btn-success">Edit</a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="alert alert-danger">
+            <p>There aren't Books yet in the archive!</p>
         </div>
-    {% endfor %}
+    {% endif %}
+
 {% endblock %}
