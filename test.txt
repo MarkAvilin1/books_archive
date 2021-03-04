@@ -1,8 +1,0 @@
-Nazar / 242424
-Daria / 353535
-Daniel / 67676
-7676
-hello world
-hello world
-hello world
-hello Python
